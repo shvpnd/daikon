@@ -1,7 +1,9 @@
 <h1 align="center">
   <p align="center"><strong>Obachān no Daikon</strong></p>
   <a href="https://sakamoto.live"><img src="./assets/hero.png" alt="Cover" style="border-radius:12px"></a>
-  <img src="./assets/badges/anybrowser2.gif">
+  
+
+<img src="./assets/badges/anybrowser2.gif">
 <img src="./assets/badges/bestviewed16bit.gif">
 <img src="./assets/badges/blink.gif">
 <img src="./assets/badges/built_with_microsoft_notepad.gif">
