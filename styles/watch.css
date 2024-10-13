@@ -1,0 +1,39 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.artplayer-app {
+    width: 640px;
+    height: 360px;
+    background: #000;
+    box-sizing: border-box;
+}
+
+.artplayer .artplayer-play-btn,
+.artplayer .artplayer-pause-btn,
+.artplayer .artplayer-volume-btn,
+.artplayer .artplayer-fullscreen-btn {
+    color: white;
+}
+
+.artplayer .artplayer-progress .artplayer-progress-bar {
+    background: white;
+}
+
+.artplayer .artplayer-progress .artplayer-progress-ball {
+    background: white;
+}
+
+
+.navigation-buttons {
+    display: flex;
+    justify-content: left;
+    margin: 10px 0;
+}
+
+.navigation-buttons button {
+    margin: 0 10px;
+}

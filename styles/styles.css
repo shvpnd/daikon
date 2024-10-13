@@ -1,0 +1,98 @@
+body {
+    font-size: 14px;
+    background-color: #888888;
+}
+
+#searchContainer {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+#suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid black;
+    display: none;
+    z-index: 1000;
+}
+
+.suggestion-item {
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: #ffffff;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestion-item img {
+    width: 50px;
+    height: auto;
+    max-height: 75px;
+    margin-right: 10px;
+}
+
+.suggestion-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollable-days {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.day-selector {
+    padding: 10px 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.day-selector.active {
+    font-weight: bold;
+}
+
+#schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+#clock {
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+
+@media (max-width: 640px) {
+    table {
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+        border: none;
+    }
+
+    #searchContainer {
+        width: 90%;
+    }
+
+    .day-selector {
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

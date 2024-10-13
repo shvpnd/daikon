@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daikon - Episodes</title>
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="episodes-container" class="episode-grid">
+        </div>
+    </div>
+
+
+    <script src="./script/episode.js"></script>
+</body>
+
+</html>
