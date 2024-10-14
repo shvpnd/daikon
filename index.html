@@ -6,44 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daikon</title>
     <link rel="icon" href="./assets/logo.png" type="image/png">
-    <meta name="description"
-        content="Daikon - An ad-free anime streaming site with a basic, non-bloated UI.">
+    <meta name="description" content="Daikon - An ad-free anime streaming site with a basic, non-bloated UI.">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
     <center>
-        <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="2" border="2" width="640">
-            <tbody>
-                <tr>
-                    <td style="vertical-align: top;">
-                        <img alt="Daikon" src="./assets/hero.png"><br>
-                        <blockquote>
-                            <h2>What is this Obachān no Daikon?</h2>
-                            <p>More like, tf is this Daikon thing? Well, my dear friend, it's an anime streaming website with a delightfully outdated user interface - and that's the selling point. Aren't you tired of perfect, modern websites? Sucker, watch anime just like your grandpa did. With a super basic user interface, it's as if she handcrafted it herself! By the way, the design inspiration comes from old DSL websites.</p>
-                            <div id="searchContainer">
-                                <input type="text" id="searchBar" placeholder="Search">
-                                <div id="suggestions"></div>
-                            </div>
-                            <div class="container">
-                                <h3>Airing Schedule</h3>
-                                <div id="clock"></div>
-                                <div class="scrollable-days">
-                                    <div class="day-selector" data-day="sunday">SUN</div>
-                                    <div class="day-selector" data-day="monday">MON</div>
-                                    <div class="day-selector" data-day="tuesday">TUE</div>
-                                    <div class="day-selector" data-day="wednesday">WED</div>
-                                    <div class="day-selector" data-day="thursday">THU</div>
-                                    <div class="day-selector" data-day="friday">FRI</div>
-                                    <div class="day-selector" data-day="saturday">SAT</div>
+        <div class="table-responsive">
+            <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="2" border="2">
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <img alt="Daikon" src="./assets/hero.png" width="100%"><br>
+                            <blockquote>
+                                <h2>What is this Obachān no Daikon?</h2>
+                                <p>More like, tf is this Daikon thing? Well, my dear friend, it's an anime streaming website with a delightfully outdated user interface - and that's the selling point. Aren't you tired of the perfect, modern websites? Sucker, watch anime just like your grandpa did. With a super basic user interface, it's as if she handcrafted it herself! By the way, the design comes from the old DSL info website.</p>
+                                <div id="searchContainer">
+                                    <input type="text" id="searchBar" placeholder="Search">
+                                    <div id="suggestions"></div>
                                 </div>
-                                <div id="schedule"></div>
-                            </div>
-                        </blockquote>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                                <div class="container">
+                                    <h3>Airing Schedule</h3>
+                                    <div id="clock"></div>
+                                    <div class="scrollable-days">
+                                        <div class="day-selector" data-day="sunday">SUN</div>
+                                        <div class="day-selector" data-day="monday">MON</div>
+                                        <div class="day-selector" data-day="tuesday">TUE</div>
+                                        <div class="day-selector" data-day="wednesday">WED</div>
+                                        <div class="day-selector" data-day="thursday">THU</div>
+                                        <div class="day-selector" data-day="friday">FRI</div>
+                                        <div class="day-selector" data-day="saturday">SAT</div>
+                                    </div>
+                                    <div id="schedule"></div>
+                                </div>
+                            </blockquote>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </center>
     <script src="./script/schedule.js"></script>
     <script src="./script/search.js"></script>
