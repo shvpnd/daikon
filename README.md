@@ -1,6 +1,6 @@
 <h1 align="center">
   <p align="center"><strong>Obachān no Daikon</strong></p>
-  <a href="https://sakamoto.live"><img src="./assets/hero.png" alt="Cover" style="border-radius:12px"></a>
+  <a href="https://ondaikon.vercel.app"><img src="./assets/hero.png" alt="Cover" style="border-radius:12px"></a>
 </h1>
 <p align="center">
 <img src="./assets/badges/anybrowser2.gif">
