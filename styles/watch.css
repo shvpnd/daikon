@@ -1,8 +1,23 @@
 html,
 body {
     height: 100%;
-    margin: 0;
-    padding: 0;
+    font-size: 14px;
+    background-color: #888888;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.episode-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 
 .artplayer-app {

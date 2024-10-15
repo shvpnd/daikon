@@ -1,10 +1,10 @@
-
 body {
     font-size: 14px;
     background-color: #888888;
-    margin: 10px; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 10px;
+    padding: 0;
 }
+
 #searchContainer {
     position: relative;
     width: 100%;
@@ -19,6 +19,14 @@ body {
     border: 1px solid black;
     display: none;
     z-index: 1000;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .suggestion-item {
@@ -78,36 +86,48 @@ body {
 
 
 .table-responsive {
-    overflow-x: auto; /* Allow horizontal scrolling on small screens */
-    width: 100%; /* Ensure the wrapper takes full width */
+    overflow-x: auto;
+    /* Allow horizontal scrolling on small screens */
+    width: 100%;
+    /* Ensure the wrapper takes full width */
 }
 
 table {
-    width: 80%; /* Allow the table to take full width */
-    max-width: 100%; /* Prevent the table from exceeding the viewport width */
-    border-collapse: collapse; /* Optional: for better border handling */
-    table-layout: fixed; /* Ensure the table layout is fixed */
+    width: 80%;
+    /* Allow the table to take full width */
+    max-width: 100%;
+    /* Prevent the table from exceeding the viewport width */
+    border-collapse: collapse;
+    /* Optional: for better border handling */
+    table-layout: fixed;
+    /* Ensure the table layout is fixed */
 }
 
 td {
-    padding: 8px; /* Adjust padding as needed */
-    text-align: left; /* Adjust text alignment as needed */
-    word-wrap: break-word; /* Allow long words to break and wrap */
+    padding: 8px;
+    /* Adjust padding as needed */
+    text-align: left;
+    /* Adjust text alignment as needed */
+    word-wrap: break-word;
+    /* Allow long words to break and wrap */
 }
 
 /* Optional: Add media queries for further customization */
 @media (max-width: 800px) {
     table {
-        width: 90%; /* Ensure full width on very small screens */
-        max-width: 100%; /* Prevent exceeding viewport width */
+        width: 90%;
+        /* Ensure full width on very small screens */
+        max-width: 100%;
+        /* Prevent exceeding viewport width */
     }
-  
+
 }
 
 @media (max-width: 640px) {
     table {
-        width: 100%; /* Ensure full width on very small screens */
-        max-width: 100%; /* Prevent exceeding viewport width */
+        width: 100%;
+        /* Ensure full width on very small screens */
+        max-width: 100%;
+        /* Prevent exceeding viewport width */
     }
 }
-
