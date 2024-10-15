@@ -154,13 +154,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
 
-    document.getElementById('next-episode').addEventListener('click', () => {
+    document.getElementById('prev-episode').addEventListener('click', () => {
         if (currentEpisodeIndex < episodeList.length - 1) {
             loadEpisode(currentEpisodeIndex + 1);
         }
     });
 
-    document.getElementById('prev-episode').addEventListener('click', () => {
+    document.getElementById('next-episode').addEventListener('click', () => {
         if (currentEpisodeIndex > 0) {
             loadEpisode(currentEpisodeIndex - 1);
         }

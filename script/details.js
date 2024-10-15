@@ -1,3 +1,9 @@
+async function fetchAnimeDetails(id) {
+    const response = await fetch(`https://amvstrm-api-olive.vercel.app/api/v2/info/${id}`);
+    const data = await response.json();
+    return data;
+}
+
 function createAnimeDetails(data) {
     const bannerImage = data.bannerImage || 'default-banner.jpg';
     const coverImage = data.coverImage ? data.coverImage.large : 'default-cover.jpg';
@@ -33,8 +39,17 @@ function createAnimeDetails(data) {
                 <p>Popularity: ${popularity}</p>
             </div>
             <div>
-                <a href="${watchUrl}">Watch Now</a> <!-- Changed to point to watch.html -->
+                <a href="${watchUrl}">Watch Now</a>
             </div>
         </div>
     `;
 }
+
+async function init() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const animeId = urlParams.get('id');
+    const animeData = await fetchAnimeDetails(animeId);
+    document.getElementById('anime-details').innerHTML = createAnimeDetails(animeData);
+}
+
+init();
