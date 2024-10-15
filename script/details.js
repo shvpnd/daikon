@@ -1,9 +1,3 @@
-async function fetchAnimeDetails(id) {
-    const response = await fetch(`https://amvstrm-api-olive.vercel.app/api/v2/info/${id}`);
-    const data = await response.json();
-    return data;
-}
-
 function createAnimeDetails(data) {
     const bannerImage = data.bannerImage || 'default-banner.jpg';
     const coverImage = data.coverImage ? data.coverImage.large : 'default-cover.jpg';
@@ -11,7 +5,7 @@ function createAnimeDetails(data) {
     const nativeName = data.title?.native || 'Unknown Native Name';
     const genres = data.genres ? data.genres.join(', ') : 'Unknown Genres';
     const additionalInfo = `${data.format || 'Unknown Format'} | ${data.season || 'Unknown Season'} | ${(data.score?.averageScore / 10).toFixed(1) || 'N/A'} | ${data.year || 'Unknown Year'} | ${data.episodes || 'Unknown Episodes'}`;
-    const watchUrl = data.id_provider?.idGogo ? `episodes.html?id=${data.id_provider.idGogo}` : '#';
+    const watchUrl = data.id_provider?.idGogo ? `watch.html?id=${data.id_provider.idGogo}` : '#';
     const popularity = data.popularity || 'Unknown';
 
     document.title = title;
@@ -39,17 +33,8 @@ function createAnimeDetails(data) {
                 <p>Popularity: ${popularity}</p>
             </div>
             <div>
-                <a href="${watchUrl}">Watch Now</a>
+                <a href="${watchUrl}">Watch Now</a> <!-- Changed to point to watch.html -->
             </div>
         </div>
     `;
 }
-
-async function init() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const animeId = urlParams.get('id');
-    const animeData = await fetchAnimeDetails(animeId);
-    document.getElementById('anime-details').innerHTML = createAnimeDetails(animeData);
-}
-
-init();
