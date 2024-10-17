@@ -11,9 +11,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     const id = getQueryParam('id');
+    const episodeIndex = getQueryParam('episodeIndex');
     if (!id) {
         console.error('No ID provided in URL');
         return;
+    }
+
+    if (episodeIndex) {
+        currentEpisodeIndex = parseInt(episodeIndex, 10);
     }
 
     const fetchVideoData = async (episodeId) => {
@@ -146,13 +151,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const episodeId = episodeList[index].id;
 
-        const newUrl = `watch.html?id=${episodeId}`;
+        const newUrl = `watch.html?id=${episodeId}&i=${currentEpisodeIndex}`;
         window.history.pushState({ path: newUrl }, '', newUrl);
 
         const videoData = await fetchVideoData(episodeId);
         initializePlayer(videoData);
     };
-
 
     document.getElementById('prev-episode').addEventListener('click', () => {
         if (currentEpisodeIndex < episodeList.length - 1) {
