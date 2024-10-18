@@ -39,10 +39,21 @@ function createAnimeDetails(data) {
                 <p>Popularity: ${popularity}</p>
             </div>
             <div>
-                <a href="${watchUrl}">Watch Now</a>
+                <a id="watch-now-link" href="${watchUrl}">Watch Now</a>
             </div>
         </div>
     `;
+}
+
+function setupWatchNowShortcut() {
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'w') {
+            const watchNowLink = document.getElementById('watch-now-link');
+            if (watchNowLink && watchNowLink.href) {
+                window.location.href = watchNowLink.href;
+            }
+        }
+    });
 }
 
 async function init() {
@@ -50,6 +61,13 @@ async function init() {
     const animeId = urlParams.get('id');
     const animeData = await fetchAnimeDetails(animeId);
     document.getElementById('anime-details').innerHTML = createAnimeDetails(animeData);
+    setupWatchNowShortcut();
 }
 
 init();
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'd' || event.key === 'D') {
+        window.location.href = 'index.html';
+    }
+});

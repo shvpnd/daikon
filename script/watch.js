@@ -177,3 +177,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     await fetchEpisodes();
 });
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft') {
+        document.getElementById('prev-episode').click();
+    }
+
+    if (event.key === 'ArrowRight') {
+        document.getElementById('next-episode').click();
+    }
+});
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'd' || event.key === 'D') {
+        window.location.href = 'index.html';
+    }
+});

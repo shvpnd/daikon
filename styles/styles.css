@@ -37,8 +37,14 @@ body {
     background-color: #ffffff;
 }
 
+.suggestion-item.active {
+    background-color: #c2c2c2;
+    color: rgb(0, 0, 0);
+}
+
+
 .suggestion-item:hover {
-    background-color: #f0f0f0;
+    background-color: #c2c2c2;
 }
 
 .suggestion-item img {
@@ -87,38 +93,26 @@ body {
 
 .table-responsive {
     overflow-x: auto;
-    /* Allow horizontal scrolling on small screens */
     width: 100%;
-    /* Ensure the wrapper takes full width */
 }
 
 table {
     width: 80%;
-    /* Allow the table to take full width */
     max-width: 100%;
-    /* Prevent the table from exceeding the viewport width */
     border-collapse: collapse;
-    /* Optional: for better border handling */
     table-layout: fixed;
-    /* Ensure the table layout is fixed */
 }
 
 td {
     padding: 8px;
-    /* Adjust padding as needed */
     text-align: left;
-    /* Adjust text alignment as needed */
     word-wrap: break-word;
-    /* Allow long words to break and wrap */
 }
 
-/* Optional: Add media queries for further customization */
 @media (max-width: 800px) {
     table {
         width: 90%;
-        /* Ensure full width on very small screens */
         max-width: 100%;
-        /* Prevent exceeding viewport width */
     }
 
 }
@@ -126,8 +120,6 @@ td {
 @media (max-width: 640px) {
     table {
         width: 100%;
-        /* Ensure full width on very small screens */
         max-width: 100%;
-        /* Prevent exceeding viewport width */
     }
 }
