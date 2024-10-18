@@ -8,44 +8,63 @@
     <link rel="icon" href="./assets/logo.png" type="image/png">
     <meta name="description" content="Daikon - An ad-free anime streaming site with a basic, non-bloated UI.">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/popup.css">
 </head>
 
 <body>
-        <div class="centered">
-            <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="2" border="2">
-                <tbody>
-                    <tr>
-                        <td style="vertical-align: top;">
-                            <img alt="Daikon" src="./assets/hero.png" width="100%"><br>
-                            <blockquote>
-                                <h2>What is this Obachān no Daikon?</h2>
-                                <p>More like, tf is this Daikon thing? Well, my dear friend, it's an anime streaming website with a delightfully outdated user interface - and that's the selling point. Aren't you tired of the perfect, modern websites? Sucker, watch anime just like your grandpa did. With a super basic user interface, it's as if she handcrafted it herself! By the way, the design comes from the old DSL info website.</p>
-                                <div id="searchContainer">
-                                    <input type="text" id="searchBar" placeholder="Search">
-                                    <div id="suggestions"></div>
+    <div class="centered">
+        <table bgcolor="#FFFFFF" cellpadding="2" cellspacing="2" border="2">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <img alt="Daikon" src="./assets/hero.png" width="100%"><br>
+                        <blockquote>
+                            <h2>What is this Obachān no Daikon?</h2>
+                            <p>More like, tf is this Daikon thing? Well, my dear friend, it's an anime streaming website
+                                with a delightfully outdated user interface - and that's the selling point. Aren't you
+                                tired of the perfect, modern websites? Sucker, watch anime just like your grandpa did.
+                                With a super basic user interface, it's as if she handcrafted it herself! By the way,
+                                the design comes from the old DSL info website.</p>
+                            <div id="searchContainer">
+                                <input type="text" id="searchBar" placeholder="Search">
+                                <div id="suggestions"></div>
+                            </div>
+                            <div class="container">
+                                <h3>Airing Schedule</h3>
+                                <div id="clock"></div>
+                                <div class="scrollable-days">
+                                    <div class="day-selector" data-day="sunday">SUN</div>
+                                    <div class="day-selector" data-day="monday">MON</div>
+                                    <div class="day-selector" data-day="tuesday">TUE</div>
+                                    <div class="day-selector" data-day="wednesday">WED</div>
+                                    <div class="day-selector" data-day="thursday">THU</div>
+                                    <div class="day-selector" data-day="friday">FRI</div>
+                                    <div class="day-selector" data-day="saturday">SAT</div>
                                 </div>
-                                <div class="container">
-                                    <h3>Airing Schedule</h3>
-                                    <div id="clock"></div>
-                                    <div class="scrollable-days">
-                                        <div class="day-selector" data-day="sunday">SUN</div>
-                                        <div class="day-selector" data-day="monday">MON</div>
-                                        <div class="day-selector" data-day="tuesday">TUE</div>
-                                        <div class="day-selector" data-day="wednesday">WED</div>
-                                        <div class="day-selector" data-day="thursday">THU</div>
-                                        <div class="day-selector" data-day="friday">FRI</div>
-                                        <div class="day-selector" data-day="saturday">SAT</div>
-                                    </div>
-                                    <div id="schedule"></div>
-                                </div>
-                            </blockquote>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                                <div id="schedule"></div>
+                            </div>
+                        </blockquote>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="shortcutsPopup" class="shortcuts-popup">
+        <div class="shortcuts-content">
+            <p><strong>Keyboard Shortcuts</strong></p>
+            <ul>
+                <li><strong>s </strong>: open search</li>
+                <li><strong>&#8592; </strong>: play next ep</li>
+                <li><strong>&#8594; </strong>: play prev ep</li>
+                <li><strong>w </strong>: watch now (on details page)</li>
+                <li><strong>d </strong>: go to daikon homepage</li>
+            </ul>
         </div>
+    </div>
+
     <script src="./script/schedule.js"></script>
     <script src="./script/search.js"></script>
+    <script src="./script/popup.js"></script>
 </body>
 
 </html>
