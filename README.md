@@ -24,5 +24,9 @@ List of current and upcoming features:
 
 - [x] Anime schedule
 - [x] Subbed only
-- [x] Responsive (kinda)
-- [ ] Ehh...
+- [x] Responsive
+- [x] Keyboard shortcuts
+- [ ] Anilist sync 
+- [ ] Frame finder
+- [ ] Custom API
+ 
