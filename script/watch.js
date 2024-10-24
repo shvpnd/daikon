@@ -28,11 +28,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return await response.json();
+            const data = await response.json();
+    
+            if (data && data.info && data.info.title) {
+                const episodeTitle = data.info.title;
+                document.getElementById('episode-title').textContent = episodeTitle;
+                document.title = `${episodeTitle}`;
+            } else {
+                console.error('Episode title not found in the API response');
+            }
+    
+            return data;
         } catch (error) {
             console.error('Error fetching API data:', error);
         }
     };
+    
+    
+    
 
     const initializePlayer = (data) => {
         if (!data || !data.stream || !data.stream.multi || !data.stream.multi.main) {

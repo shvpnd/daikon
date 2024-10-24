@@ -3,7 +3,7 @@ async function fetchSchedule(day = 'monday') {
         const response = await fetch(`https://api.jikan.moe/v4/schedules?filter=${day}`);
         const data = await response.json();
 
-        const popularityThreshold = 7.5;
+        const popularityThreshold = 6.5;
 
         const processedShows = data.data
             .filter(show => show.score >= popularityThreshold)
