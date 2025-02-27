@@ -7,16 +7,24 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex; /* Added for centering */
     justify-content: center;
     align-items: center;
 }
 
 .shortcuts-content {
     background-color: white;
-    padding: 10px;
+    padding: 15px;
+    max-width: 90%; /* Makes it responsive */
     width: 400px;
     font-family: monospace;
     text-align: left;
     border: 1px solid black;
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Prevents width issues */
 }
 
+/* Prevent background scrolling when popup is open */
+body.popup-active {
+    overflow: hidden;
+}
